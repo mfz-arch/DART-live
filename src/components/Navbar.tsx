@@ -24,12 +24,13 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
           
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center space-x-3 group shrink-0">
-            <div className="relative w-12 h-12 rounded-2xl overflow-hidden shadow-md border border-emerald-900/10 group-hover:scale-105 transition-transform duration-300 bg-[#090D16]">
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm border border-slate-200 group-hover:scale-105 transition-transform duration-300">
               <Image
                 src="/images/dart_icon.png"
                 alt="DART-Live Official Mwendokasi App Icon"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             <div className="flex flex-col justify-center">
