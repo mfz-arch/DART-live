@@ -118,11 +118,11 @@ export default function DARTMapInner({
       scrollWheelZoom={true}
       className="w-full h-full z-0"
     >
-      {/* Light CartoDB Base Map */}
+      {/* Free Dark Mode Tile Layer (Esri World Dark Gray - No API Key Required) */}
       <TileLayer
-        attribution='&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap'
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-        maxZoom={19}
+        attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+        maxZoom={16}
       />
 
       {/* DART BRT Dedicated Corridors (Polylines) */}
