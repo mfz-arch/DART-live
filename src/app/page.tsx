@@ -47,18 +47,18 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-white text-slate-900">
       {/* 1. Hero Section with Pure White & Real Photography Overlay */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-slate-200 bg-slate-50">
-        {/* Real Photograph Background Overlay - Clearer & Vibrant */}
-        <div className="absolute inset-0 z-0 opacity-45 transition-opacity duration-500">
+        {/* Real Photograph Background Overlay - Vivid & Clear */}
+        <div className="absolute inset-0 z-0 opacity-70 transition-opacity duration-500">
           <Image
             src="/images/dart_hero_bg.jpg"
             alt="Real Photograph of Dar es Salaam Waterfront & DART Bus"
             fill
-            className="object-cover object-center scale-105 filter brightness-95 contrast-105"
+            className="object-cover object-center scale-105 filter brightness-98 contrast-105"
             priority
           />
         </div>
-        {/* Soft Radial & Linear Gradient Overlay for Perfect Text Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/90 z-0 backdrop-blur-[1px]" />
+        {/* Balanced Soft White Mask for Outstanding Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/50 to-white/85 z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-[#006B38] text-xs font-bold uppercase tracking-wider mb-8 shadow-xs">
