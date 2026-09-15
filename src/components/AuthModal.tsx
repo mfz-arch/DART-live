@@ -60,8 +60,8 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess, initialMode = "LOGI
             <X className="w-5 h-5" />
           </button>
 
-          <div className="flex items-center space-x-3 mb-2">
-            <div className="w-10 h-10 rounded-xl bg-white p-1 shadow-md">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-xl bg-white p-1 shadow-md shrink-0">
               <Image
                 src="/images/dart_icon.png"
                 alt="DART Icon"
@@ -71,34 +71,14 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess, initialMode = "LOGI
               />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold tracking-tight">DART-Live Commuter</h3>
-              <p className="text-xs text-emerald-100 font-medium">Mwendokasi Smart Pass Account</p>
+              <h3 className="text-xl font-extrabold tracking-tight">
+                {activeTab === "LOGIN" ? "Sign In to DART-Live" : "Create Commuter Account"}
+              </h3>
+              <p className="text-xs text-emerald-100 font-medium">
+                {activeTab === "LOGIN" ? "Enter your phone to access live pass" : "Register your Mwendokasi Smart Pass"}
+              </p>
             </div>
           </div>
-        </div>
-
-        {/* Tab Switcher */}
-        <div className="flex border-b border-slate-200 bg-slate-50">
-          <button
-            onClick={() => setActiveTab("LOGIN")}
-            className={`flex-1 py-3 text-xs font-bold uppercase tracking-wider transition-all border-b-2 ${
-              activeTab === "LOGIN"
-                ? "border-[#006B38] text-[#006B38] bg-white"
-                : "border-transparent text-slate-500 hover:text-slate-900"
-            }`}
-          >
-            Sign In
-          </button>
-          <button
-            onClick={() => setActiveTab("SIGNUP")}
-            className={`flex-1 py-3 text-xs font-bold uppercase tracking-wider transition-all border-b-2 ${
-              activeTab === "SIGNUP"
-                ? "border-[#006B38] text-[#006B38] bg-white"
-                : "border-transparent text-slate-500 hover:text-slate-900"
-            }`}
-          >
-            Create Account
-          </button>
         </div>
 
         {/* Form Body */}
@@ -212,6 +192,32 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess, initialMode = "LOGI
           <div className="flex items-center justify-center space-x-1 text-[11px] text-slate-500 font-medium pt-2">
             <ShieldCheck className="w-3.5 h-3.5 text-[#006B38]" />
             <span>Encrypted DART Smart Transit Validation</span>
+          </div>
+
+          <div className="pt-3 border-t border-slate-100 text-center text-xs text-slate-600 font-medium">
+            {activeTab === "LOGIN" ? (
+              <span>
+                Don&apos;t have an account yet?{" "}
+                <button
+                  type="button"
+                  onClick={() => setActiveTab("SIGNUP")}
+                  className="font-bold text-[#006B38] hover:underline cursor-pointer"
+                >
+                  Create an account
+                </button>
+              </span>
+            ) : (
+              <span>
+                Already registered your pass?{" "}
+                <button
+                  type="button"
+                  onClick={() => setActiveTab("LOGIN")}
+                  className="font-bold text-[#006B38] hover:underline cursor-pointer"
+                >
+                  Sign in here
+                </button>
+              </span>
+            )}
           </div>
         </form>
       </div>
