@@ -126,57 +126,72 @@ export const DART_LINES: DARTLine[] = [
     code: "EXP-101",
     name: "Kimara - Kivukoni Express",
     type: "EXPRESS",
-    color: "#10B981",
+    color: "#006B38",
     origin: "Kimara Terminal",
     destination: "Kivukoni Ferry",
     operating_hours: "05:00 - 23:00",
     fare_tsh: 750,
     stations: ["ST-KIMARA", "ST-UBUNGO", "ST-MAGOMENI", "ST-FIRE", "ST-POSTA", "ST-KIVUKONI"],
     waypoints: [
-      { lat: -6.7865, lng: 39.1762 },
-      { lat: -6.7910, lng: 39.2230 },
-      { lat: -6.7924, lng: 39.2083 },
-      { lat: -6.8081, lng: 39.2550 },
-      { lat: -6.8145, lng: 39.2740 },
-      { lat: -6.8175, lng: 39.2882 },
-      { lat: -6.8190, lng: 39.2965 },
+      { lat: -6.7865, lng: 39.1762 }, // Kimara Terminal
+      { lat: -6.7885, lng: 39.1900 }, // Korogwe
+      { lat: -6.7905, lng: 39.2010 }, // Msewe
+      { lat: -6.7924, lng: 39.2083 }, // Ubungo Interchange
+      { lat: -6.7930, lng: 39.2310 }, // Urafiki
+      { lat: -6.7960, lng: 39.2380 }, // Manzese
+      { lat: -6.8081, lng: 39.2550 }, // Magomeni Kanisani
+      { lat: -6.8115, lng: 39.2640 }, // Jangwani
+      { lat: -6.8145, lng: 39.2740 }, // Fire Station
+      { lat: -6.8155, lng: 39.2800 }, // DIT Junction
+      { lat: -6.8175, lng: 39.2882 }, // Posta Ya Zamani
+      { lat: -6.8190, lng: 39.2965 }, // Kivukoni Ferry Terminal
     ],
   },
   {
     code: "LOC-102",
     name: "Kimara - Gerezani Local",
     type: "LOCAL",
-    color: "#3B82F6",
+    color: "#2563EB",
     origin: "Kimara Terminal",
     destination: "Gerezani Terminal",
     operating_hours: "05:00 - 23:30",
     fare_tsh: 750,
     stations: ["ST-KIMARA", "ST-SHEKILANGO", "ST-UBUNGO", "ST-MAGOMENI", "ST-USALAMA", "ST-FIRE", "ST-GEREZANI"],
     waypoints: [
-      { lat: -6.7865, lng: 39.1762 },
-      { lat: -6.7910, lng: 39.2230 },
-      { lat: -6.7924, lng: 39.2083 },
-      { lat: -6.8081, lng: 39.2550 },
-      { lat: -6.8105, lng: 39.2635 },
-      { lat: -6.8145, lng: 39.2740 },
-      { lat: -6.8220, lng: 39.2820 },
+      { lat: -6.7865, lng: 39.1762 }, // Kimara Terminal
+      { lat: -6.7885, lng: 39.1900 }, // Korogwe
+      { lat: -6.7905, lng: 39.2010 }, // Msewe
+      { lat: -6.7924, lng: 39.2083 }, // Ubungo Interchange
+      { lat: -6.7915, lng: 39.2230 }, // Shekilango
+      { lat: -6.7930, lng: 39.2310 }, // Urafiki
+      { lat: -6.7960, lng: 39.2380 }, // Manzese
+      { lat: -6.8081, lng: 39.2550 }, // Magomeni Kanisani
+      { lat: -6.8105, lng: 39.2635 }, // Usalama Hub
+      { lat: -6.8145, lng: 39.2740 }, // Fire Station
+      { lat: -6.8180, lng: 39.2780 }, // Msimbazi Junction
+      { lat: -6.8220, lng: 39.2820 }, // Gerezani Terminal
     ],
   },
   {
     code: "EXP-103",
     name: "Morocco - Kivukoni Express",
     type: "EXPRESS",
-    color: "#F59E0B",
+    color: "#D97706",
     origin: "Morocco Terminal",
     destination: "Kivukoni Ferry",
     operating_hours: "05:30 - 22:30",
     fare_tsh: 750,
     stations: ["ST-MOROCCO", "ST-MAGOMENI", "ST-POSTA", "ST-KIVUKONI"],
     waypoints: [
-      { lat: -6.7760, lng: 39.2570 },
-      { lat: -6.8081, lng: 39.2550 },
-      { lat: -6.8175, lng: 39.2882 },
-      { lat: -6.8190, lng: 39.2965 },
+      { lat: -6.7760, lng: 39.2570 }, // Morocco Terminal
+      { lat: -6.7850, lng: 39.2580 }, // Victoria
+      { lat: -6.7940, lng: 39.2575 }, // Kinondoni Studio
+      { lat: -6.8081, lng: 39.2550 }, // Magomeni Kanisani
+      { lat: -6.8115, lng: 39.2640 }, // Jangwani
+      { lat: -6.8145, lng: 39.2740 }, // Fire Station
+      { lat: -6.8155, lng: 39.2800 }, // DIT Junction
+      { lat: -6.8175, lng: 39.2882 }, // Posta Ya Zamani
+      { lat: -6.8190, lng: 39.2965 }, // Kivukoni Ferry Terminal
     ],
   },
 ];

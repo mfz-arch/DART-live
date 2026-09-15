@@ -271,14 +271,14 @@ export default function HomePage() {
           <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-md space-y-3 glass-panel-hover">
             <div className="relative h-52 rounded-2xl overflow-hidden">
               <Image
-                src="/images/dart_bus_waterfront.jpg"
-                alt="Ocean Waterfront Corridor"
+                src="/images/dart_posta_skyline.jpg"
+                alt="Dar es Salaam Posta Financial District & Skyline"
                 fill
                 className="object-cover"
               />
             </div>
-            <h4 className="text-sm font-bold text-slate-900">Waterfront Corridor Line</h4>
-            <p className="text-xs text-slate-500">Express service along Kivukoni oceanfront avenue.</p>
+            <h4 className="text-sm font-bold text-slate-900">Posta Financial District & Skyline</h4>
+            <p className="text-xs text-slate-500">PSPF Towers, Posta MPPA & Kivukoni oceanfront avenue.</p>
           </div>
         </div>
       </section>
