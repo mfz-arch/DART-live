@@ -11,6 +11,7 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authModalOpen, setAuthModalOpen] = useState(false);
+  const [authModalMode, setAuthModalMode] = useState<"LOGIN" | "SIGNUP">("LOGIN");
   const [user, setUser] = useState<{ name: string; phone: string; cardBalance: number } | null>(null);
 
   const navLinks = [
@@ -110,7 +111,10 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
               ) : (
                 <div className="flex items-center space-x-2">
                   <button
-                    onClick={() => setAuthModalOpen(true)}
+                    onClick={() => {
+                      setAuthModalMode("LOGIN");
+                      setAuthModalOpen(true);
+                    }}
                     className="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center space-x-1.5"
                   >
                     <LogIn className="w-3.5 h-3.5 text-[#006B38]" />
@@ -118,7 +122,10 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
                   </button>
 
                   <button
-                    onClick={() => setAuthModalOpen(true)}
+                    onClick={() => {
+                      setAuthModalMode("SIGNUP");
+                      setAuthModalOpen(true);
+                    }}
                     className="px-4 py-2 rounded-xl text-xs font-bold bg-[#006B38] hover:bg-emerald-700 text-white transition-all shadow-sm shadow-emerald-900/20 flex items-center space-x-1.5"
                   >
                     <UserPlus className="w-3.5 h-3.5" />
@@ -182,6 +189,7 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
                   <button
                     onClick={() => {
                       setMobileMenuOpen(false);
+                      setAuthModalMode("LOGIN");
                       setAuthModalOpen(true);
                     }}
                     className="w-full py-3 rounded-xl bg-slate-100 font-bold text-sm text-slate-800"
@@ -191,6 +199,7 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
                   <button
                     onClick={() => {
                       setMobileMenuOpen(false);
+                      setAuthModalMode("SIGNUP");
                       setAuthModalOpen(true);
                     }}
                     className="w-full py-3 rounded-xl bg-[#006B38] font-bold text-sm text-white shadow-md"
@@ -207,6 +216,7 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
       {/* Auth Modal Popup */}
       <AuthModal
         isOpen={authModalOpen}
+        initialMode={authModalMode}
         onClose={() => setAuthModalOpen(false)}
         onLoginSuccess={(loggedInUser) => setUser(loggedInUser)}
       />

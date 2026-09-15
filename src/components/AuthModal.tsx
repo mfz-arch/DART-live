@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Lock, Mail, Phone, User, Bus, CreditCard, ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
@@ -8,11 +8,19 @@ interface AuthModalProps {
   isOpen: boolean;
   onClose: () => void;
   onLoginSuccess: (user: { name: string; phone: string; cardBalance: number }) => void;
+  initialMode?: "LOGIN" | "SIGNUP";
 }
 
-export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
-  const [activeTab, setActiveTab] = useState<"LOGIN" | "SIGNUP">("LOGIN");
+export function AuthModal({ isOpen, onClose, onLoginSuccess, initialMode = "LOGIN" }: AuthModalProps) {
+  const [activeTab, setActiveTab] = useState<"LOGIN" | "SIGNUP">(initialMode);
   const [loading, setLoading] = useState(false);
+
+  // Synchronize tab with initialMode when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTab(initialMode);
+    }
+  }, [isOpen, initialMode]);
 
   // Form states
   const [name, setName] = useState("");
