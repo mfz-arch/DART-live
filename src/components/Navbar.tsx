@@ -23,26 +23,26 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
         <div className="flex items-center justify-between h-20">
           
           {/* Logo & Brand Identity */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md shadow-emerald-900/20 border border-emerald-300 group-hover:scale-105 transition-transform duration-300 bg-emerald-950">
+          <Link href="/" className="flex items-center space-x-3 group shrink-0">
+            <div className="relative w-12 h-12 rounded-2xl overflow-hidden shadow-md border border-emerald-900/10 group-hover:scale-105 transition-transform duration-300 bg-[#090D16]">
               <Image
-                src="/images/dart_logo.jpg"
-                alt="DART-Live Official Mwendokasi Logo"
+                src="/images/dart_icon.png"
+                alt="DART-Live Official Mwendokasi App Icon"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover"
               />
             </div>
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl font-extrabold tracking-tight text-slate-900">
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center space-x-2 whitespace-nowrap">
+                <span className="text-2xl font-extrabold tracking-tight text-slate-900 whitespace-nowrap">
                   DART<span className="text-[#006B38]">-Live</span>
                 </span>
-                <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-[#006B38] border border-emerald-200 rounded-full">
+                <span className="px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-emerald-50 text-[#006B38] border border-emerald-200 rounded-full whitespace-nowrap">
                   Mwendokasi
                 </span>
               </div>
-              <p className="text-xs text-slate-500 flex items-center gap-1.5 font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" />
+              <p className="text-xs text-slate-500 flex items-center gap-1.5 font-medium whitespace-nowrap">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block shrink-0" />
                 Dar Rapid Transit Real-Time
               </p>
             </div>
