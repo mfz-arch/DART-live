@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -23,8 +24,13 @@ export function Navbar({ activeBusesCount = 48 }: { activeBusesCount?: number })
           
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-11 h-11 rounded-xl bg-[#006B38] flex items-center justify-center shadow-md shadow-emerald-900/20 group-hover:scale-105 transition-transform duration-300">
-              <Bus className="w-6 h-6 text-white" />
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md shadow-emerald-900/20 border border-emerald-300 group-hover:scale-105 transition-transform duration-300 bg-emerald-950">
+              <Image
+                src="/images/dart_logo.jpg"
+                alt="DART-Live Official Mwendokasi Logo"
+                fill
+                className="object-cover object-bottom"
+              />
             </div>
             <div>
               <div className="flex items-center space-x-2">
