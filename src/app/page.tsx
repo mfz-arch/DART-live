@@ -44,54 +44,53 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#090d16] text-white">
-      {/* 1. Hero Section with Authentic Sunset Cityscape Background */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-white/10">
-        {/* Real Photograph Overlay */}
-        <div className="absolute inset-0 z-0">
+    <div className="flex flex-col min-h-screen bg-white text-slate-900">
+      {/* 1. Hero Section with Pure White & Real Photography Overlay */}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-slate-200 bg-slate-50">
+        {/* Real Photograph Background Overlay */}
+        <div className="absolute inset-0 z-0 opacity-20 mix-blend-multiply">
           <Image
             src="/images/dart_hero_bg.jpg"
             alt="Real Photograph of Dar es Salaam Waterfront & DART Bus"
             fill
-            className="object-cover object-center opacity-45 scale-105"
+            className="object-cover object-center scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#090d16] via-[#090d16]/75 to-[#090d16]/30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#090d16] via-transparent to-[#090d16]" />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-slate-50/60 z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-8 backdrop-blur-md shadow-lg shadow-emerald-950/50">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+          <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-[#006B38] text-xs font-bold uppercase tracking-wider mb-8 shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-emerald-600 animate-ping" />
             <span>Mwendokasi Real-Time BRT Corridor Network</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-tight text-slate-900">
             Live Transit Tracking for <br className="hidden sm:inline" />
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 bg-clip-text text-transparent">
+            <span className="text-[#006B38]">
               Dar es Salaam DART Corridors
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto font-normal leading-relaxed drop-shadow">
+          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed">
             Experience real-time bus GPS positions, precise station ETA countdowns, route planners, and occupancy intelligence across Kimara, Ubungo, Morocco, and Kivukoni terminals.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/map"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-[#006B38] text-white font-bold text-base flex items-center justify-center space-x-3 shadow-xl shadow-emerald-950/60 hover:scale-105 transition-transform duration-200 border border-emerald-400/40"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#006B38] hover:bg-emerald-700 text-white font-bold text-base flex items-center justify-center space-x-3 shadow-lg shadow-emerald-900/20 transition-all duration-200"
             >
-              <MapPin className="w-5 h-5 text-emerald-300" />
+              <MapPin className="w-5 h-5 text-emerald-200" />
               <span>Launch Interactive Map</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
 
             <Link
               href="/stations"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl glass-panel text-slate-200 hover:text-white font-semibold text-base flex items-center justify-center space-x-3 glass-panel-hover"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white border border-slate-200 text-slate-800 hover:text-slate-900 font-semibold text-base flex items-center justify-center space-x-3 shadow-sm hover:shadow-md transition-all"
             >
-              <Bus className="w-5 h-5 text-emerald-400" />
+              <Bus className="w-5 h-5 text-[#006B38]" />
               <span>Station ETA Board</span>
             </Link>
           </div>
@@ -105,14 +104,14 @@ export default function HomePage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 mb-8">
           <div>
-            <div className="flex items-center space-x-2 text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">
+            <div className="flex items-center space-x-2 text-[#006B38] font-bold text-xs uppercase tracking-widest mb-1">
               <Zap className="w-4 h-4" />
               <span>Real-Time GPS Streaming</span>
             </div>
-            <h2 className="text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
               Live Bus Rapid Transit Map
             </h2>
-            <p className="text-sm text-slate-400 mt-1">
+            <p className="text-sm text-slate-500 mt-1">
               Select corridors to filter active buses on dedicated BRT lanes.
             </p>
           </div>
@@ -123,8 +122,8 @@ export default function HomePage() {
               onClick={() => setSelectedLineFilter("ALL")}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                 selectedLineFilter === "ALL"
-                  ? "bg-emerald-500 text-white shadow-lg shadow-emerald-900/40"
-                  : "glass-panel text-slate-300 hover:bg-slate-800/80"
+                  ? "bg-[#006B38] text-white shadow-md"
+                  : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
               }`}
             >
               All Lines ({buses.length})
@@ -135,8 +134,8 @@ export default function HomePage() {
                 onClick={() => setSelectedLineFilter(line.code)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   selectedLineFilter === line.code
-                    ? "bg-emerald-500 text-white shadow-lg shadow-emerald-900/40"
-                    : "glass-panel text-slate-300 hover:bg-slate-800/80"
+                    ? "bg-[#006B38] text-white shadow-md"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
                 }`}
               >
                 {line.code}
@@ -147,7 +146,7 @@ export default function HomePage() {
 
         {/* Map Container Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 h-[550px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+          <div className="lg:col-span-2 h-[550px] rounded-3xl overflow-hidden border border-slate-200 shadow-xl relative bg-slate-50">
             <DARTMap
               buses={buses}
               selectedLineFilter={selectedLineFilter}
@@ -160,45 +159,45 @@ export default function HomePage() {
           <div className="flex flex-col space-y-4">
             {/* Selected Station or Bus Details */}
             {selectedStation && (
-              <div className="glass-panel p-6 rounded-3xl border border-white/10 space-y-4">
-                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-lg space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                   <div>
-                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">
+                    <span className="text-[10px] font-bold text-[#006B38] uppercase tracking-wider block">
                       Station Inspector
                     </span>
-                    <h3 className="text-lg font-bold text-white">{selectedStation.name}</h3>
+                    <h3 className="text-lg font-bold text-slate-900">{selectedStation.name}</h3>
                   </div>
                   {selectedStation.is_interchange && (
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                    <span className="px-2.5 py-1 rounded-md text-[10px] font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
                       Interchange Hub
                     </span>
                   )}
                 </div>
 
-                <div className="text-xs text-slate-400">
-                  Zone: <strong className="text-slate-200">{selectedStation.zone}</strong>
+                <div className="text-xs text-slate-500">
+                  Zone: <strong className="text-slate-800">{selectedStation.zone}</strong>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                  <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
                     Next Arriving Buses
                   </h4>
                   {selectedStation.incoming_buses.map((bus, i) => (
                     <div
                       key={i}
-                      className="flex items-center justify-between p-3 rounded-xl bg-slate-900/80 border border-white/5"
+                      className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200"
                     >
                       <div>
-                        <span className="font-mono text-xs font-bold text-emerald-400 block">
+                        <span className="font-mono text-xs font-bold text-[#006B38] block">
                           {bus.line}
                         </span>
-                        <span className="text-xs text-slate-300">To {bus.destination}</span>
+                        <span className="text-xs text-slate-600">To {bus.destination}</span>
                       </div>
                       <div className="text-right">
-                        <span className="text-sm font-extrabold text-amber-400 block">
+                        <span className="text-sm font-extrabold text-amber-700 block">
                           {bus.eta_minutes} mins
                         </span>
-                        <span className="text-[10px] font-semibold text-slate-400 uppercase">
+                        <span className="text-[10px] font-semibold text-slate-500 uppercase">
                           {bus.occupancy} Seats
                         </span>
                       </div>
@@ -209,7 +208,7 @@ export default function HomePage() {
             )}
 
             {/* Authentic DART Bus Real Photo Card */}
-            <div className="relative rounded-3xl overflow-hidden glass-panel p-6 border border-white/10 group">
+            <div className="relative rounded-3xl overflow-hidden bg-white p-6 border border-slate-200 shadow-lg group">
               <div className="relative h-44 rounded-2xl overflow-hidden mb-4">
                 <Image
                   src="/images/dart_bus_green.jpg"
@@ -217,10 +216,9 @@ export default function HomePage() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#090d16] via-transparent to-transparent" />
               </div>
-              <h4 className="text-base font-bold text-white">DART Mwendokasi Fleet</h4>
-              <p className="text-xs text-slate-400 mt-1">
+              <h4 className="text-base font-bold text-slate-900">DART Mwendokasi Fleet</h4>
+              <p className="text-xs text-slate-500 mt-1">
                 Authentic 18-meter Golden Dragon & Yutong BRT buses operating on exclusive lanes across Dar es Salaam.
               </p>
             </div>
@@ -229,22 +227,22 @@ export default function HomePage() {
       </section>
 
       {/* 4. Authentic Photo Gallery Showcase */}
-      <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-white/10">
+      <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-t border-slate-200 bg-slate-50">
         <div className="mb-8">
-          <div className="flex items-center space-x-2 text-emerald-400 font-bold text-xs uppercase tracking-widest mb-1">
+          <div className="flex items-center space-x-2 text-[#006B38] font-bold text-xs uppercase tracking-widest mb-1">
             <Bus className="w-4 h-4" />
             <span>Actual Transit Fleet & Infrastructure</span>
           </div>
-          <h2 className="text-3xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
             Mwendokasi Network in Action
           </h2>
-          <p className="text-sm text-slate-400 mt-1">
+          <p className="text-sm text-slate-500 mt-1">
             Real photography of DART buses, station bays, and Dar es Salaam corridors.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="glass-panel p-4 rounded-3xl border border-white/10 space-y-3 glass-panel-hover">
+          <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-md space-y-3 glass-panel-hover">
             <div className="relative h-52 rounded-2xl overflow-hidden">
               <Image
                 src="/images/dart_bus_skyline.jpg"
@@ -253,11 +251,11 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <h4 className="text-sm font-bold text-white">City Center Dedicated Lanes</h4>
-            <p className="text-xs text-slate-400">DART buses passing PSPF Towers and City Center CBD.</p>
+            <h4 className="text-sm font-bold text-slate-900">City Center Dedicated Lanes</h4>
+            <p className="text-xs text-slate-500">DART buses passing PSPF Towers and City Center CBD.</p>
           </div>
 
-          <div className="glass-panel p-4 rounded-3xl border border-white/10 space-y-3 glass-panel-hover">
+          <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-md space-y-3 glass-panel-hover">
             <div className="relative h-52 rounded-2xl overflow-hidden">
               <Image
                 src="/images/dart_terminal_hub.jpg"
@@ -266,11 +264,11 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <h4 className="text-sm font-bold text-white">Kimara Terminal Bus Bays</h4>
-            <p className="text-xs text-slate-400">High-capacity covered platform terminal with multiple bus lanes.</p>
+            <h4 className="text-sm font-bold text-slate-900">Kimara Terminal Bus Bays</h4>
+            <p className="text-xs text-slate-500">High-capacity covered platform terminal with multiple bus lanes.</p>
           </div>
 
-          <div className="glass-panel p-4 rounded-3xl border border-white/10 space-y-3 glass-panel-hover">
+          <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-md space-y-3 glass-panel-hover">
             <div className="relative h-52 rounded-2xl overflow-hidden">
               <Image
                 src="/images/dart_bus_waterfront.jpg"
@@ -279,38 +277,38 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <h4 className="text-sm font-bold text-white">Waterfront Corridor Line</h4>
-            <p className="text-xs text-slate-400">Express service along Kivukoni oceanfront avenue.</p>
+            <h4 className="text-sm font-bold text-slate-900">Waterfront Corridor Line</h4>
+            <p className="text-xs text-slate-500">Express service along Kivukoni oceanfront avenue.</p>
           </div>
         </div>
       </section>
 
       {/* 5. Quick Trip Planner Widget */}
-      <section className="py-16 bg-[#0c1220] border-t border-white/5">
+      <section className="py-16 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Form */}
-            <div className="glass-panel p-8 rounded-3xl border border-white/10 space-y-6">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-lg space-y-6">
               <div className="flex items-center space-x-3">
-                <div className="p-3 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                <div className="p-3 rounded-2xl bg-emerald-100 text-[#006B38] border border-emerald-200">
                   <Navigation className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Quick Route & Fare Finder</h3>
-                  <p className="text-xs text-slate-400">Calculate travel duration & ticket fare in TSh</p>
+                  <h3 className="text-2xl font-bold text-slate-900">Quick Route & Fare Finder</h3>
+                  <p className="text-xs text-slate-500">Calculate travel duration & ticket fare in TSh</p>
                 </div>
               </div>
 
               <form onSubmit={handleQuickCalc} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
                     Origin Station
                   </label>
                   <select
                     value={quickOrigin}
                     onChange={(e) => setQuickOrigin(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white font-semibold focus:outline-none focus:border-emerald-500"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-semibold focus:outline-none focus:border-[#006B38]"
                   >
                     {DART_STATIONS.map((s) => (
                       <option key={s.station_id} value={s.station_id}>
@@ -321,13 +319,13 @@ export default function HomePage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
                     Destination Station
                   </label>
                   <select
                     value={quickDest}
                     onChange={(e) => setQuickDest(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 text-white font-semibold focus:outline-none focus:border-emerald-500"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-semibold focus:outline-none focus:border-[#006B38]"
                   >
                     {DART_STATIONS.map((s) => (
                       <option key={s.station_id} value={s.station_id}>
@@ -339,14 +337,14 @@ export default function HomePage() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition-all shadow-lg shadow-emerald-900/40"
+                  className="w-full py-4 rounded-xl bg-[#006B38] hover:bg-emerald-700 text-white font-bold text-sm transition-all shadow-md"
                 >
                   Calculate Journey
                 </button>
               </form>
 
               {calcResult && (
-                <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">
+                <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-[#006B38] text-xs font-bold">
                   {calcResult}
                 </div>
               )}
@@ -354,7 +352,7 @@ export default function HomePage() {
 
             {/* Feature Bullet Points */}
             <div className="space-y-6">
-              <h3 className="text-3xl font-extrabold text-white tracking-tight">
+              <h3 className="text-3xl font-extrabold text-slate-900 tracking-tight">
                 Designed specifically for Dar es Salaam commuters
               </h3>
               <div className="space-y-4">
@@ -376,11 +374,11 @@ export default function HomePage() {
                     desc: "Real-time alerts regarding weather disruptions, maintenance, or express frequencies.",
                   },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start space-x-4 p-4 rounded-2xl glass-panel">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                    <CheckCircle2 className="w-6 h-6 text-[#006B38] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-base font-bold text-white">{item.title}</h4>
-                      <p className="text-xs text-slate-400 mt-0.5">{item.desc}</p>
+                      <h4 className="text-base font-bold text-slate-900">{item.title}</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">{item.desc}</p>
                     </div>
                   </div>
                 ))}
