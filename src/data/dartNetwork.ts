@@ -134,16 +134,25 @@ export const DART_LINES: DARTLine[] = [
     stations: ["ST-KIMARA", "ST-UBUNGO", "ST-MAGOMENI", "ST-FIRE", "ST-POSTA", "ST-KIVUKONI"],
     waypoints: [
       { lat: -6.7865, lng: 39.1762 }, // Kimara Terminal
-      { lat: -6.7885, lng: 39.1900 }, // Korogwe
-      { lat: -6.7905, lng: 39.2010 }, // Msewe
+      { lat: -6.7872, lng: 39.1820 }, // Kimara Stop
+      { lat: -6.7885, lng: 39.1905 }, // Korogwe
+      { lat: -6.7895, lng: 39.1970 }, // Mavurunza
+      { lat: -6.7905, lng: 39.2025 }, // Buchosa
       { lat: -6.7924, lng: 39.2083 }, // Ubungo Interchange
+      { lat: -6.7918, lng: 39.2155 }, // Ubungo Maji
+      { lat: -6.7915, lng: 39.2230 }, // Shekilango
       { lat: -6.7930, lng: 39.2310 }, // Urafiki
-      { lat: -6.7960, lng: 39.2380 }, // Manzese
+      { lat: -6.7950, lng: 39.2355 }, // Manzese Argentina
+      { lat: -6.7975, lng: 39.2405 }, // Manzese
+      { lat: -6.8010, lng: 39.2460 }, // Manzese Tip Top
+      { lat: -6.8048, lng: 39.2515 }, // Magomeni Mapipa
       { lat: -6.8081, lng: 39.2550 }, // Magomeni Kanisani
       { lat: -6.8115, lng: 39.2640 }, // Jangwani
       { lat: -6.8145, lng: 39.2740 }, // Fire Station
       { lat: -6.8155, lng: 39.2800 }, // DIT Junction
+      { lat: -6.8162, lng: 39.2840 }, // Kisutu
       { lat: -6.8175, lng: 39.2882 }, // Posta Ya Zamani
+      { lat: -6.8185, lng: 39.2925 }, // Sokoine Drive
       { lat: -6.8190, lng: 39.2965 }, // Kivukoni Ferry Terminal
     ],
   },
@@ -159,12 +168,18 @@ export const DART_LINES: DARTLine[] = [
     stations: ["ST-KIMARA", "ST-SHEKILANGO", "ST-UBUNGO", "ST-MAGOMENI", "ST-USALAMA", "ST-FIRE", "ST-GEREZANI"],
     waypoints: [
       { lat: -6.7865, lng: 39.1762 }, // Kimara Terminal
-      { lat: -6.7885, lng: 39.1900 }, // Korogwe
-      { lat: -6.7905, lng: 39.2010 }, // Msewe
+      { lat: -6.7872, lng: 39.1820 },
+      { lat: -6.7885, lng: 39.1905 },
+      { lat: -6.7895, lng: 39.1970 },
+      { lat: -6.7905, lng: 39.2025 },
       { lat: -6.7924, lng: 39.2083 }, // Ubungo Interchange
+      { lat: -6.7918, lng: 39.2155 },
       { lat: -6.7915, lng: 39.2230 }, // Shekilango
       { lat: -6.7930, lng: 39.2310 }, // Urafiki
-      { lat: -6.7960, lng: 39.2380 }, // Manzese
+      { lat: -6.7950, lng: 39.2355 },
+      { lat: -6.7975, lng: 39.2405 },
+      { lat: -6.8010, lng: 39.2460 },
+      { lat: -6.8048, lng: 39.2515 },
       { lat: -6.8081, lng: 39.2550 }, // Magomeni Kanisani
       { lat: -6.8105, lng: 39.2635 }, // Usalama Hub
       { lat: -6.8145, lng: 39.2740 }, // Fire Station
@@ -184,13 +199,17 @@ export const DART_LINES: DARTLine[] = [
     stations: ["ST-MOROCCO", "ST-MAGOMENI", "ST-POSTA", "ST-KIVUKONI"],
     waypoints: [
       { lat: -6.7760, lng: 39.2570 }, // Morocco Terminal
-      { lat: -6.7850, lng: 39.2580 }, // Victoria
-      { lat: -6.7940, lng: 39.2575 }, // Kinondoni Studio
+      { lat: -6.7845, lng: 39.2578 }, // Victoria
+      { lat: -6.7900, lng: 39.2575 }, // Mwanamboka
+      { lat: -6.7950, lng: 39.2570 }, // Kinondoni Studio
+      { lat: -6.8020, lng: 39.2560 }, // Magomeni Mikoroshoni
       { lat: -6.8081, lng: 39.2550 }, // Magomeni Kanisani
       { lat: -6.8115, lng: 39.2640 }, // Jangwani
       { lat: -6.8145, lng: 39.2740 }, // Fire Station
       { lat: -6.8155, lng: 39.2800 }, // DIT Junction
+      { lat: -6.8162, lng: 39.2840 }, // Kisutu
       { lat: -6.8175, lng: 39.2882 }, // Posta Ya Zamani
+      { lat: -6.8185, lng: 39.2925 }, // Sokoine Drive
       { lat: -6.8190, lng: 39.2965 }, // Kivukoni Ferry Terminal
     ],
   },
